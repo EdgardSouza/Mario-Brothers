@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&display=swap" rel="stylesheet">
+    <title>Super Mario</title>
+</head>
+
+<body>
+
+    <div class="caixa-video-mario">
+        <video src="./video.mp4" autoplay muted loop></video>
+        <div class="mascara-video"></div>
+    </div>
+
+    <div class="caixa-principal">
+        <img src="./logo.png" alt="logo do super mario" class="logo-mario">
+        <p>Plumbers Mario & Luigi - Solving Your Problems With Style!</p>
+        <p>Have you ever found yourself in a plumbing emergency situation? Unexpected leaks, clogged pipes
+            or taps that won't stop dripping? Don't worry, because we're here to save the day! We present the
+            you the most famous plumbers in the Mushroom Kingdom - Mario and Luigi!</p>
+
+        <button onclick="cliqueiNoBotao()">Contact us</button>
+
+    </div>
+
+
+    <img src="./mario.png" alt="Mario e Luigi" class="imagem-mario-luigi">
+
+    <form class="fale-conosco" action="edgard-souza@hotmail.com" method="POST">
+        <input placeholder="Your name" type="text" name="name">
+        <input placeholder="Your phone" type="tel" name="phone">
+        <textarea placeholder="Enter your problem here" name="your text"></textarea>
+        <button onclick="sumirFormulario()">Submit Form</button>
+    </form>
+
+    <div class="mascara-form"></div>
+
+</body>
+
+<script>
+    let formulario = document.querySelector(".fale-conosco")
+    let mascara = document.querySelector(".mascara-form")
+
+
+    function cliqueiNoBotao(){
+        formulario.style.left = "700px"
+        mascara.style.visibility = "visible"
+    }
+
+    function sumirFormulario(){
+        formulario.style.left = "-320px"
+        mascara.style.visibility = "hidden"
+    }
+
+</script>
+
+
+
+</html>
